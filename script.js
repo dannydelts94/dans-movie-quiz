@@ -1,4 +1,5 @@
 var startButton = document.getElementById('start-btn')
+var nextButton = document.getElementById('next-btn')
 var quesContainEl = document.getElementById('qcontainer')
 var randomQues, currentQues
 var quesEl = document.getElementById('question')
@@ -6,7 +7,6 @@ var answerQuesEl = document.getElementById('choicebutt')
 startButton.addEventListener('click', startQuiz)
 
 function startQuiz () {
-  console.log("started")
   startButton.classList.add('hide')
   randomQues = questions.sort(() => Math.random() - .5)
   currentQues = 0
@@ -32,7 +32,12 @@ function showQuestion(question) {
       answerQuesEl.appendChild(aButton)
     });
 }
-
+function resetQues() {
+    nextButton.classList.add('hide')
+    while (answerQuesEl.firstChild) {
+        answerQuesEl.removeChild(answerQuesEl.firstChild)
+    }
+}
 function answerQues () {
 
 
