@@ -1,0 +1,29 @@
+h1 {
+font-family: "copperplate", fantasy;
+left: 0;
+line-height: 200px;
+margin-top: -200px;
+position: absolute;
+text-align: center;
+top: 50%;
+width: 100%;
+}
+p {
+left: 0;
+line-height: 200px;
+margin-top: -150px;
+position: absolute;
+text-align: center;
+top: 50%;
+width: 100%;
+    } 
+.button {
+margin: 400px 660px; 
+background-color: blue;
+color: antiquewhite;
+cursor: pointer;
+}
+  
+    
+
+
