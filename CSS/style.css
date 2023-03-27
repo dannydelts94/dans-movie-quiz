@@ -1,3 +1,7 @@
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
 h1 {
 font-family: "copperplate", fantasy;
 left: 0;
@@ -17,7 +21,7 @@ text-align: center;
 top: 50%;
 width: 100%;
     } 
-.button {
+.startbutton {
 margin: 400px 660px; 
 background-color: blue;
 color: antiquewhite;
