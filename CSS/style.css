@@ -1,33 +1,53 @@
 *, *::before, *::after {
     box-sizing: border-box;
+    font-family: "copperplate", fantasy;
 }
-
-h1 {
-font-family: "copperplate", fantasy;
-left: 0;
-line-height: 200px;
-margin-top: -200px;
-position: absolute;
-text-align: center;
-top: 50%;
-width: 100%;
+body {
+    padding: 0;
+    margin: 0;
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(174, 92, 72);
 }
-p {
-left: 0;
-line-height: 200px;
-margin-top: -150px;
-position: absolute;
-text-align: center;
-top: 50%;
-width: 100%;
-    } 
-.startbutton {
-margin: 400px 660px; 
-background-color: blue;
-color: antiquewhite;
+.container {
+border-radius: 5px;
+background-color: rgb(112, 14, 14);
+width: 800px;
+max-width: 80%;
+padding: 10px;
+box-shadow: 0 0 10px 2px;
+}
+.choicebutton {
+   display: grid;
+   grid-template-columns: repeat(2, auto);
+   gap: 10px;
+   margin: 20px 0;
+}
+.btn {
+    background-color:rgb(36, 120, 92);
+    border: 1px solid black;
+    border-radius: 5px;
+    padding: 5px 10px;
+    color: rgb(247, 245, 242);
+    outline:none;
+}
+.btn:hover {
+background-color: gray;
 cursor: pointer;
 }
-  
-    
-
-
+.start-btn, .next-btn {
+font-size: 1.5rem;
+font-weight: bold;
+padding: 10px 20px;
+}
+.navi {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.hide {
+    display: none;
+}
