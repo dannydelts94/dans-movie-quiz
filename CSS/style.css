@@ -2,13 +2,6 @@
     box-sizing: border-box;
     font-family: "copperplate", fantasy;
 }
-section {
-    height: 100vh;
-    width: 100%;
-    display: flex;
-    align-items:flex-start
-    justify-content:flex-start
-}
 h1 {
     font-size: small;
 }
