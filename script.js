@@ -1,3 +1,4 @@
+/* variables that will be called */
 var startButton = document.getElementById('start-btn')
 var nextButton = document.getElementById('next-btn')
 var questionContainerElement = document.getElementById('qcontainer')
@@ -6,7 +7,9 @@ var answerButtonsElement = document.getElementById('choicebutt')
 var shuffledQuestions
 var currentQuestionIndex
 var timeLeft = 60
+/* listens for the click to start the game */
 startButton.addEventListener('click', startGame)
+/* listens for the click to move to the next question */
 nextButton.addEventListener('click', () => {
   currentQuestionIndex++
   setNextQuestion()
