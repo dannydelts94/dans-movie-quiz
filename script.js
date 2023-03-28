@@ -14,6 +14,7 @@ nextButton.addEventListener('click', () => {
   currentQuestionIndex++
   setNextQuestion()
 })
+/* function that operates the game's 60 second countdown timer */
 function startTimer() {
   var timer = setInterval(function () {
     if (timeLeft <= 0) {
@@ -26,6 +27,7 @@ function startTimer() {
     timeLeft -= 1;
   }, 1000);
 }
+/* function that will add a class of incorrect or correct to element and then decide what to do based on that */
 function setStatusClass(element, correct) {
   clearStatusClass(element)
   if (correct) {
@@ -37,7 +39,7 @@ function setStatusClass(element, correct) {
     document.getElementById('timer').innerHTML= timeLeft - 5 + " seconds remaing";
   }
 }
-
+/* funtion that starts the game and generates random questions */
 function startGame() {
   startButton.classList.add('hide')
   shuffledQuestions = questions.sort(() => Math.random() - .5)
@@ -45,12 +47,12 @@ function startGame() {
   questionContainerElement.classList.remove('hide')
   setNextQuestion()
 }
-
+/* shuffles the questions when moving to next */
 function setNextQuestion() {
   resetState()
   showQuestion(shuffledQuestions[currentQuestionIndex])
 }
-
+/* is populating the questions below to the page */
 function showQuestion(question) {
   questionElement.innerText = question.question
   question.answers.forEach(answer => {
@@ -64,7 +66,7 @@ function showQuestion(question) {
     answerButtonsElement.appendChild(button)
   })
 }
-
+/* function preforms when game is reset to restart page */
 function resetState() {
   clearStatusClass(document.body)
   nextButton.classList.add('hide')
@@ -72,7 +74,7 @@ function resetState() {
     answerButtonsElement.removeChild(answerButtonsElement.firstChild)
   }
 }
-
+/* function preformed when answer is selected allowing next button to be selected and displaying game over when final question is answered */
 function selectAnswer(e) {
   var selectedButton = e.target
   var correct = selectedButton.dataset.correct
@@ -87,15 +89,13 @@ function selectAnswer(e) {
     startButton.classList.remove('hide')
   }
 }
-
-
-
+/* function that will remove these values of an element */
 function clearStatusClass(element) {
   element.classList.remove('correct')
   element.classList.remove('incorrect')
 }
 
-
+/* the questions that will populate the quiz game */
 var questions = [
   {
     question: 'Who starred in Black Swan?',
