@@ -1,9 +1,16 @@
+var timeLeft = document.querySelector('h1');
+let timeSecond = 60;
 var startButton = document.getElementById('start-btn')
 var nextButton = document.getElementById('next-btn')
 var quesContainEl = document.getElementById('qcontainer')
 var randomQues, currentQues
 var quesEl = document.getElementById('question')
 var answerQuesEl = document.getElementById('choicebutt')
+timeLeft.innerHTML = `Time:${timeSecond}`;
+var countDown = setInterval (()=>{
+timeSecond--;
+timeLeft.innerHTML = `Time:${timeSecond}`;
+},1000)
 startButton.addEventListener('click', startQuiz)
 nextButton.addEventListener('click', () => {
     currentQues++
@@ -56,7 +63,7 @@ function answerQues(e) {
     if (randomQues.legnth > currentQues + 1) {
     nextButton.classList.remove('hide')
 } else {
-    startButton.innerText - 'Restart'
+    startButton.innerText = 'Restart'
     startButton.classList.remove('hide')
 }
 }
