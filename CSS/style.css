@@ -2,6 +2,7 @@
     box-sizing: border-box;
     font-family: "copperplate", fantasy;
 }
+
 body {
     padding: 0;
     margin: 0;
@@ -12,6 +13,7 @@ body {
     align-items: center;
     background-color: rgb(174, 92, 72);
 }
+
 .container {
 border-radius: 5px;
 background-color: rgb(112, 14, 14);
