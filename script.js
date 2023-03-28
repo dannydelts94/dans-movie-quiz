@@ -78,14 +78,16 @@ function setStatusClass(element, correct) {
   clearStatusClass(element)
   if (correct) {
     element.classList.add('correct')
+    document.getElementById("choicebutt").innerHTML = "Correct!"
   } else {
-    element.classList.add('wrong')
+    element.classList.add('incorrect')
+    document.getElementById("choicebutt").innerHTML = "Incorrect!"
   }
 }
 
 function clearStatusClass(element) {
   element.classList.remove('correct')
-  element.classList.remove('wrong')
+  element.classList.remove('incorrect')
 }
 
 
