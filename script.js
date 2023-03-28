@@ -1,22 +1,28 @@
-var timeLeft = document.querySelector('h1');
-let timeSecond = 60;
+
 var startButton = document.getElementById('start-btn')
 var nextButton = document.getElementById('next-btn')
 var quesContainEl = document.getElementById('qcontainer')
 var randomQues, currentQues
 var quesEl = document.getElementById('question')
 var answerQuesEl = document.getElementById('choicebutt')
-timeLeft.innerHTML = `Time:${timeSecond}`;
-var countDown = setInterval (()=>{
-timeSecond--;
-timeLeft.innerHTML = `Time:${timeSecond}`;
-},1000)
 startButton.addEventListener('click', startQuiz)
 nextButton.addEventListener('click', () => {
     currentQues++
     nextQues()
 })
-
+function startTimer() {
+    var timeLeft = 60;
+    var timer = setInterval(function() {
+      if (timeLeft <= 0) {
+        clearInterval(timer);
+        document.getElementById("timer").innerHTML = "Time's up!";
+      } else {
+        document.getElementById("timer").innerHTML = timeLeft + " seconds remaining";
+      }
+      timeLeft -= 1;
+    }, 1000);
+  }
+  
 
 function startQuiz () {
   startButton.classList.add('hide')

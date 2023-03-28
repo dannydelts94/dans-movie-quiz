@@ -2,8 +2,10 @@
     box-sizing: border-box;
     font-family: "copperplate", fantasy;
 }
-h1 {
-    font-size: small;
+header {
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
 }
 body {
     padding: 0;
