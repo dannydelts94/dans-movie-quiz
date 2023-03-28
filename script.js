@@ -1,10 +1,10 @@
-const startButton = document.getElementById('start-btn')
-const nextButton = document.getElementById('next-btn')
-const questionContainerElement = document.getElementById('qcontainer')
-const questionElement = document.getElementById('question')
-const answerButtonsElement = document.getElementById('choicebutt')
-
-let shuffledQuestions, currentQuestionIndex
+var startButton = document.getElementById('start-btn')
+var nextButton = document.getElementById('next-btn')
+var questionContainerElement = document.getElementById('qcontainer')
+var questionElement = document.getElementById('question')
+var answerButtonsElement = document.getElementById('choicebutt')
+var shuffledQuestions
+var currentQuestionIndex
 
 startButton.addEventListener('click', startGame)
 nextButton.addEventListener('click', () => {
@@ -109,8 +109,25 @@ var questions = [
       { text: 'Alfred Hitchcock', correct: true },
       { text: 'Fritz Lang', incorrect: false },
     ]
+  },
+  {
+    question: 'What movie did Robert Downey Jr co star in?',
+    answers: [
+      { text: 'The Breakfast Club', incorrect: false },
+      { text: 'Less Than Zero', correct: true },
+      { text: 'Uncle Buck', incorrect: false },
+      { text: 'Heathers', incorrect: false },
+    ]
+
+  },
+  {
+    question: 'In which state did the movie Napoleon Dynamite take place?',
+    answers: [
+      { text: 'Wyoming', incorrect: false },
+      { text: 'Utah', incorrect: false },
+      { text: 'Montana', incorrect: false },
+      { text: 'Idaho', correct: true },
+    ]
+
   }
-
-
-
 ]
