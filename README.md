@@ -17,3 +17,6 @@ N/A
 MIT
 
 ## Deployed Link 
+
+
+![Screenshot of Quiz App](/assets/quiz-screenshot.png)
